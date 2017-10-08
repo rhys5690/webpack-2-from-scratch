@@ -2,9 +2,16 @@
   "name": "webpack-2-from-scratch",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch"
+  },
   "license": "MIT",
   "devDependencies": {
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2"
   }
 }

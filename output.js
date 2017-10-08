@@ -67,8 +67,12 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-document.write('hello webpack');
 
+const dress = () => {
+  document.write('hello webpack I\'m watching for changes');
+};
+
+dress();
 
 /***/ })
 /******/ ]);
