@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/Cellar/node/8.6.0/bin/node /usr/local/Cellar/yarn/1.1.0/libexec/bin/yarn.js add webpack @latest
+
+PATH: 
+  /usr/local/opt/mysql@5.6/bin:/Users/rhys/.rvm/gems/ruby-2.3.1/bin:/Users/rhys/.rvm/gems/ruby-2.3.1@global/bin:/Users/rhys/.rvm/rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/rhys/.rvm/bin
+
+Yarn version: 
+  1.1.0
+
+Node version: 
+  8.6.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "webpack-2-from-scratch",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://npm-proxy.fury.io/vhSarUtfzDkKML1GeT54/oneflare/@latest: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.1.0/libexec/lib/cli.js:61779:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.1.0/libexec/lib/cli.js:121917:22)
+      at emitTwo (events.js:125:13)
+      at Request.emit (events.js:213:7)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.1.0/libexec/lib/cli.js:122900:10)
+      at emitOne (events.js:115:13)
+      at Request.emit (events.js:210:7)
+      at Gunzip.<anonymous> (/usr/local/Cellar/yarn/1.1.0/libexec/lib/cli.js:122820:12)
+      at Object.onceWrapper (events.js:314:30)
+      at emitNone (events.js:110:20)
