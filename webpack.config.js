@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 let config = {
   entry: './src/index.js',
@@ -25,7 +26,8 @@ let config = {
     ]
   },
   plugins: [
-    new ExtractTextWebpackPlugin('styles.css') //call the extracttext constructor and name our css file
+    new ExtractTextWebpackPlugin('styles.css'), //call the extracttext constructor and name our css file
+    new webpack.optimize.UglifyJsPlugin()
   ],
   devServer: {
     contentBase: path.resolve(__dirname, './public'), //A directory or url to serve content from
