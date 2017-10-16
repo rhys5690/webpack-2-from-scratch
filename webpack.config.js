@@ -11,6 +11,13 @@ let config = { // config object
     path: path.resolve(__dirname, './public'), // ouput path
     filename: 'output.js' // output filename
   },
+
+    resolve: {
+      extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.jpeg', 'jpg', '.gif', '.png'],
+      alias: {
+        images: path.resolve(__dirname, 'src/assets/images')
+      }
+    },
   module: {
     rules: [ // loader rules
       {
@@ -20,10 +27,15 @@ let config = { // config object
       },
       {
         test: /\.scss$/, // files ending with .scss
-        use: ExtractTextWebpackPlugin.extract({ // call our plugin with extract method
+        use: ['css-hot-loader'].concat(ExtractTextWebpackPlugin.extract({ // call our plugin with extract method
           use: ['css-loader', 'sass-loader'], // use these loaders
           fallback: 'style-loader' // fallback for any CSS not extracted
-        }) // end extract
+        })), // end extract
+      },
+      {
+        test: /\.jsx$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
       }
     ] // end rules
   },
